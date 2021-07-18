@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(to right bottom, #86b1f7, #1c3052);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main_container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  width: 100%;
+  max-width: 320px;
+  height: 80vh;
+  background: url("./bgimg.jpg") no-repeat center;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.main_container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 70%,
+    rgba(0, 0, 0, 0.4)
+  );
+}
+.top {
+  text-align: center;
+  z-index: 999;
+}
+.top h1 {
+  color: white;
+  line-height: 2;
+}
+
+.top input,
+.top button {
+  display: block;
+  width: 80%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  margin: 10px auto 10px;
+}
+
+.top input {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-bottom: solid 2px green;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  font-size: 14px;
+  color: aquamarine;
+  text-transform: capitalize;
+}
+.top input:focus {
+  color: white;
+  font-size: 15px;
+}
+.top input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.top button {
+  background-color: rgb(141, 0, 87);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.top button:hover {
+  background-color: rgb(82, 0, 50);
+}
+.top .error {
+  color: rgb(124, 8, 8);
+  font-size: 14px;
+  font-weight: 600;
+}
+.icon {
+  text-align: center;
+  padding-top: 15px;
+}
+.location {
+  text-align: center;
+  padding-top: 15px;
+  color: rgb(22, 2, 53);
+  line-height: 1.6;
+}
+
+.location .city {
+  font-size: 20px;
+  font-weight: bold;
+}
+.current {
+  width: 80%;
+  position: relative;
+  padding-top: 20px;
+  font-weight: 630;
+  text-align: left;
+  left: 10%;
+}
+.current::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: blueviolet;
+  left: 0;
+  top: 0;
+}
+.current > * {
+  padding-bottom: 5px;
+}
